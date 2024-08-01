@@ -12,7 +12,7 @@ function random_emoji {
 }
 
 # Set PS1 with a function call for the emoji
-export PS1='[\t] \w\n$(random_emoji) > '
+export PS1='[\t] \w\n$(random_emoji)>'
 
 # Bash completion - need bash-completion@2 installed on homebrew.
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
