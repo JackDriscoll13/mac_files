@@ -2,9 +2,8 @@
 export HISTSIZE=5000
 export HISTFILESIZE=10000
 
-bind '"\e[A": history-search-backward'
-bind '"\e[B": history-search-forward'
-
+bind '"\C-p": history-search-backward'
+bind '"\C-n": history-search-forward'
 
 emojis=("🏄" "⛷️" "🌍" "⛰️" "🐍")
 EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
