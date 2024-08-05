@@ -5,14 +5,8 @@ export HISTFILESIZE=10000
 bind '"\C-p": history-search-backward'
 bind '"\C-n": history-search-forward'
 
-# Function to generate random emoji, adding spaces to mountain and skier.
-function random_emoji {
-    emojis=("🏄" "⛷️ " "🌍" "⛰️ " "🐍")
-    echo ${emojis[$RANDOM % ${#emojis[@]}]}
-}
-
-# Set PS1 with a function call for the emoji
-export PS1='[\t] \w\n$(random_emoji)>'
+# Set the prompt with just the world emoji
+PS1='\[\033[01;32m\][\t]\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\n\[\]🌍\[\] ->'
 
 # Bash completion - need bash-completion@2 installed on homebrew.
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
@@ -21,7 +15,5 @@ export PS1='[\t] \w\n$(random_emoji)>'
 bind "set show-all-if-ambiguous on"
 bind "set completion-ignore-case on"
 bind "set menu-complete-display-prefix on"
-
-
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
