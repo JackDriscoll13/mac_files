@@ -5,9 +5,9 @@ export HISTFILESIZE=10000
 bind '"\C-p": history-search-backward'
 bind '"\C-n": history-search-forward'
 
-# Function to generate random emoji
+# Function to generate random emoji, adding spaces to mountain and skier.
 function random_emoji {
-    emojis=("🏄" "⛷️" "🌍" "⛰️" "🐍")
+    emojis=("🏄" "⛷️ " "🌍" "⛰️ " "🐍")
     echo ${emojis[$RANDOM % ${#emojis[@]}]}
 }
 
